@@ -1,0 +1,128 @@
+*{ 
+    margin: 0;
+    padding: 0%;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+}
+img{
+    cursor: pointer;
+    
+}
+
+h1 {
+  padding: 16px 0px;
+}
+
+.main-container{
+  padding: 32px 16px;
+}
+  .flex-div{
+    display: flex;
+    align-items: center;
+  }
+  .navbar{
+    padding: 10px, 20px;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: static;
+    top: 0;
+    z-index: 10;
+    border-bottom: #5a5a5a;
+  }
+
+  .navbar img {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 5px;
+  }
+
+  .nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+
+  .logo-text {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #030303;
+    margin-left: 5px;
+  
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .navbar { 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  h1 {
+    font: size 40px;;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(165, 14, 14);
+    text-align: center;
+    
+  }
+
+  p {
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+  }
+
+.info-business{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: rgb(99, 2, 2);
+  text-align: center;
+  padding: 16px 0px;
+
+}
+
+.about-business {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: rgb(99, 2, 2);
+  text-align: center;
+  padding: 16px 0px;
+
+}
