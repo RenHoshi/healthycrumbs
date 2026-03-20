@@ -1,0 +1,311 @@
+/* =============================================
+   1. PAGE SETUP
+   Sets the font and background for everything
+============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff9f0;
+  color: #2e1a0e;
+}
+
+/* =============================================
+   2. NAVBAR
+   The bar that sticks to the top of the page
+============================================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 16px 28px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.left-section,
+.middle-section,
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+/* =============================================
+   3. MAIN WRAPPER
+   Keeps everything centered and not too wide
+============================================= */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px 24px;
+}
+
+/* =============================================
+   4. PAGE HEADING
+   The big "Youtube Analytics" title
+============================================= */
+#text-heading {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 48px;
+
+  /* Red-to-yellow gradient text, same as the hero banner */
+  background: linear-gradient(135deg, #c0392b, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =============================================
+   5. SECTIONS
+   Each video gets its own white rounded card
+============================================= */
+.first-section,
+.second-section {
+  background-color: #ffffff;
+  border-radius: 22px;
+  padding: 36px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+
+  /* A red left border accent to match the theme */
+  border-left: 5px solid #c0392b;
+}
+
+/* =============================================
+   6. CONTAINER 1
+   Thumbnail on the left, stat boxes on the right
+============================================= */
+.container1 {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* stacks on small screens */
+}
+
+/* ---- Thumbnail ---- */
+.thumbnail-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.thumbnail-section img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.thumbnail-section h2 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2e1a0e;
+  text-align: center;
+  max-width: 220px;
+  line-height: 1.5;
+}
+
+/* ---- 6 stat boxes in a 3x2 grid ---- */
+.analytics-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  flex: 1;
+}
+
+/* =============================================
+   7. STAT BOXES (.box)
+   The small white tiles showing each number
+============================================= */
+.box {
+  background-color: #fff5e0;
+  border-radius: 14px;
+  padding: 18px 14px;
+  text-align: center;
+  border-top: 3px solid #f39c12;
+  transition: transform 0.2s;
+}
+
+/* Boxes float up slightly on hover */
+.box:hover {
+  transform: translateY(-4px);
+}
+
+/* The big number inside each box */
+.box h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #c0392b;
+  margin-bottom: 10px;
+}
+
+/* The icon + label row at the bottom of each box */
+.box .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.box .icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.box .icon p {
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+/* =============================================
+   8. CONTAINER 2
+   Three wider boxes below container 1
+============================================= */
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+/* ---- Wide stat boxes (.box2) ---- */
+.box2 {
+  background-color: #fff5e0;
+  border-radius: 14px;
+  padding: 22px 18px;
+  text-align: center;
+  border-top: 3px solid #c0392b;
+  transition: transform 0.2s;
+}
+
+.box2:hover {
+  transform: translateY(-4px);
+}
+
+.box2 h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #c0392b;
+  margin-bottom: 10px;
+}
+
+.box2 .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.box2 .icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.box2 .icon p {
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+/* =============================================
+   9. TABLET — screens 768px wide or smaller
+   Two columns instead of three for the boxes
+============================================= */
+@media (max-width: 768px) {
+  /* Shrink the page heading */
+  #text-heading {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  /* Less padding on the section cards */
+  .first-section,
+  .second-section {
+    padding: 24px 18px;
+  }
+
+  /* Stack thumbnail above the stat boxes */
+  .container1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Thumbnail fills the full width */
+  .thumbnail-section img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .thumbnail-section h2 {
+    max-width: 100%;
+  }
+
+  /* 2 columns instead of 3 for the stat boxes */
+  .analytics-section {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  /* 2 columns for the bottom row too */
+  .container2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =============================================
+   10. MOBILE — screens 480px wide or smaller
+   One column so everything is easy to read
+============================================= */
+@media (max-width: 480px) {
+  /* Even smaller heading */
+  #text-heading {
+    font-size: 22px;
+  }
+
+  /* Tighter page padding on small phones */
+  main {
+    padding: 32px 14px 60px;
+  }
+
+  /* Remove the left border and use a top border instead
+     so it looks good in a narrow column */
+  .first-section,
+  .second-section {
+    border-left: none;
+    border-top: 5px solid #c0392b;
+    padding: 20px 14px;
+  }
+
+  /* One column for all stat boxes */
+  .analytics-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* One column for the bottom row */
+  .container2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Slightly smaller numbers so they fit */
+  .box h1,
+  .box2 h1 {
+    font-size: 26px;
+  }
+}
